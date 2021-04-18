@@ -223,8 +223,8 @@ MonoBehaviour:
       bulletDamage: 50
       BulletLifeTime: 1.45
       MovementSettings:
-        MaxSpeed: 15
-        ZeroToMaxSpeed: 0
+        MaxSpeed: 50
+        ZeroToMaxSpeed: 2
         MaxSpeedToZero: 0
     MovementInput:
       MoveVector: {x: 0, y: 0}

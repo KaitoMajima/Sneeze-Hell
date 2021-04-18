@@ -182,7 +182,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1642215687
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -2
   m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
   m_Color: {r: 0.36320752, g: 1, b: 0.38641644, a: 0.7607843}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb90894903014d4792ed8ad685163a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletImpactPrefab: {fileID: 0}
+  bulletImpactPrefab: {fileID: 7278859075386493633, guid: 70e41bee76f3b7f48a7485c2d2b6acea, type: 3}
   bulletImpactSound: {fileID: 0}
   usePooling: 1
   bulletData:
@@ -221,10 +221,10 @@ MonoBehaviour:
         Acceleration: {x: 0, y: 0}
     BulletSettings:
       bulletDamage: 50
-      BulletLifeTime: 5
+      BulletLifeTime: 0.9
       MovementSettings:
-        MaxSpeed: 15
-        ZeroToMaxSpeed: 0
+        MaxSpeed: 50
+        ZeroToMaxSpeed: 2
         MaxSpeedToZero: 0
     MovementInput:
       MoveVector: {x: 0, y: 0}
@@ -324,7 +324,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1642215687
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

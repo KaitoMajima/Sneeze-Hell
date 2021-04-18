@@ -16,10 +16,8 @@ namespace KaitoCo
         
         public static void Move(ref MovementState state, in MovementSettings settings, in Vector2 input, float deltaTime)
         {
-            if(input.magnitude > 0)
-                state.Velocity += input * (Mathf.Min(settings.AccelerationRate, settings.MaxSpeed) * deltaTime);
-            else
-                state.Velocity += Vector2.one * (Mathf.Max(settings.DecelerationRate, 0) * deltaTime);
+            Accelerate(ref state.Velocity, input, settings.AccelerationRate,  settings.MaxSpeed, deltaTime);
+            Decelerate(ref state.Velocity, input, settings.DecelerationRate, deltaTime);
         }
 
         private static void Accelerate(ref Vector2 velocity, in Vector2 input, float acceleration,  float maxSpeed, float deltaTime)

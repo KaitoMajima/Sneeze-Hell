@@ -28,6 +28,8 @@ namespace KaitoCo
             fireAction = playerActionMap.FindAction("Fire");
             fireAction.performed += PullTrigger;
             fireAction.canceled += ReleaseTrigger;
+
+            
         }  
 
         private void InputMousePosition(InputAction.CallbackContext context)

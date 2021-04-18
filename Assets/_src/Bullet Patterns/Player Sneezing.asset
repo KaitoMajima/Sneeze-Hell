@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6f2488b5b231a14e8c4452941651d8c, type: 3}
-  m_Name: Spread LockOn
+  m_Name: Player Sneezing
   m_EditorClassIdentifier: 
   patterns:
-  - bulletPrefab: {fileID: 8149134337374371219, guid: c0e08c032965021439ee84e2a42fde09, type: 3}
-    useLockOn: 1
-    fireRate: 0.04
-    spinRate: 0
+  - bulletPrefab: {fileID: 8149134337374371219, guid: c0bd8c81a3f87f54a82e861f90aa8d3e, type: 3}
+    useLockOn: 0
+    fireRate: 0.02
+    spinRate: 1000
     initialRotation: 0
-    accuracy: 0.68
+    accuracy: 0.7
     accuracyAngleRange: {x: -20, y: 20}
-    bulletsPerShot: 1
+    bulletsPerShot: 3
     maxArrayAngleRange: 360
     isBurst: 0
-    burstDuration: 0
-    BurstShotCount: 0
-    maxBulletsPooled: 250
+    burstDuration: 0.3
+    BurstShotCount: 4
+    maxBulletsPooled: 333
