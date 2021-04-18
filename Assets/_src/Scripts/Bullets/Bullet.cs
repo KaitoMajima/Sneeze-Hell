@@ -117,14 +117,16 @@ namespace KaitoCo
                 }
 
             }
-            StopCoroutine(bulletLifetimeCoroutine);
+            if(bulletLifetimeCoroutine != null)
+                StopCoroutine(bulletLifetimeCoroutine);
             Explode();
         }
         private void OnEnable()
         {
             if(usePooling)
             {
-                StopCoroutine(bulletLifetimeCoroutine);
+                if(bulletLifetimeCoroutine != null)
+                    StopCoroutine(bulletLifetimeCoroutine);
                 lifetime = bulletData.BulletSettings.BulletLifeTime;
                 bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(lifetime, (seconds) => {lifetime = seconds;}));
             }
