@@ -17,7 +17,7 @@ namespace KaitoCo
         private InputAction movementAction;
         private InputAction fireAction;
         private InputAction aimAction;
-        public Action<DashSettings> onInitiateSneeze;
+        public Action<DashSettings, Vector2> onInitiateSneeze;
         public Action onSneezeRecover;
         [SerializeField] private DashSettings sneezeDashSettings;
         [SerializeField] private TweenController sneezeAnimation;
@@ -38,8 +38,7 @@ namespace KaitoCo
             fireAction = playerActionMap.FindAction("Fire");
 
             aimAction = playerActionMap.FindAction("Aim");
-            
-
+        
             onInitiateSneeze += InitiateSneeze;
             onSneezeRecover += SneezeRecover;
         }
@@ -66,18 +65,10 @@ namespace KaitoCo
             moveInput.MoveVector = context.ReadValue<Vector2>();  
         }
 
-        private void InitiateSneeze(DashSettings sneezeDashSettings)
+        private void InitiateSneeze(DashSettings sneezeDashSettings, Vector2 input)
         {
             
-            float xRandomValue = Random.Range(-1f, 1f);
-            if(xRandomValue < float.Epsilon && xRandomValue > -float.Epsilon)
-                xRandomValue = 1;
-            
-            float yRandomValue = Random.Range(-1f, 1f);
-            if(yRandomValue < float.Epsilon && yRandomValue > -float.Epsilon)
-                yRandomValue = 1;
-            
-            Movement.Move(ref movementState, sneezeDashSettings.movementSettings, new Vector2(xRandomValue, yRandomValue).normalized, 1);
+            Movement.Move(ref movementState, sneezeDashSettings.movementSettings, input.normalized, 1);
             playerRigidbody.velocity = movementState.Velocity;
 
             playerState = Player.PlayerState.Sneezing;
