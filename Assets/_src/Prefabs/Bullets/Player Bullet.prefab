@@ -182,7 +182,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1642215687
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -2
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 1, g: 0.592527, b: 0.07075471, a: 0.7607843}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb90894903014d4792ed8ad685163a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletImpactPrefab: {fileID: 0}
+  bulletImpactPrefab: {fileID: 4007658716499901394, guid: f89ac1efb71ff5945a8eb52f1513b392, type: 3}
   bulletImpactSound: {fileID: 0}
   usePooling: 1
   bulletData:
@@ -221,7 +221,7 @@ MonoBehaviour:
         Acceleration: {x: 0, y: 0}
     BulletSettings:
       bulletDamage: 50
-      BulletLifeTime: 5
+      BulletLifeTime: 1.45
       MovementSettings:
         MaxSpeed: 15
         ZeroToMaxSpeed: 0
@@ -324,7 +324,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1642215687
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_Sprite: {fileID: 3625043607559282579, guid: 0d267bc78a0864eb48358689b29ed20a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

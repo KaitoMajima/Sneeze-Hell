@@ -32,10 +32,14 @@ namespace KaitoCo
         {
             foreach (var bullet in bullets)
             {
+                var bulletScript = bullet.GetComponent<Bullet>();
                 MonoBehaviour.Destroy(bullet);
             }
             OnDispose?.Invoke(this);
         }
+
+
+
     }
     public class BulletPoolMaster : MonoBehaviour
     {

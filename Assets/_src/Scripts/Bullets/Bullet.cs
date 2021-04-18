@@ -53,36 +53,42 @@ namespace KaitoCo
         private Coroutine bulletLifetimeCoroutine;
         private bool wasEnabledLastFrame;
 
-        
+        private float lifetime;
         public Action<IActor, IDamageable, Bullet> OnBulletHitDamageable;
         private void Start()
         {
-            bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(bulletData.BulletSettings.BulletLifeTime));
+            lifetime = bulletData.BulletSettings.BulletLifeTime;
+            bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(lifetime, (seconds) => {lifetime = seconds;}));
             bulletOwnerType = bulletOwner.GetComponent<IActor>().GetType();
         }
         private void Explode()
         {
             bulletImpactSound?.TriggerSound();
+            
+            
             if(!usePooling)
                 Destroy(gameObject);
             else
             {
-                gameObject.SetActive(false);
                 if(bulletImpactPrefab != null)
                     Instantiate(bulletImpactPrefab, transform.position, Quaternion.identity);
+                gameObject.SetActive(false);
+                    
             }
                 
         }
 
-        private IEnumerator LifetimeCountdown(float seconds)
+        private IEnumerator LifetimeCountdown(float seconds, Action<float> callback)
         {
             while(seconds > 0)
             {
                 seconds -= Time.deltaTime;
+                callback?.Invoke(seconds);
                 yield return null;
             }
             Explode();
         }
+
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
@@ -116,6 +122,13 @@ namespace KaitoCo
         }
         private void OnEnable()
         {
+            if(usePooling)
+            {
+                StopCoroutine(bulletLifetimeCoroutine);
+                lifetime = bulletData.BulletSettings.BulletLifeTime;
+                bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(lifetime, (seconds) => {lifetime = seconds;}));
+            }
+                
             wasEnabledLastFrame = true;
         }
 

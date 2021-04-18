@@ -20,6 +20,7 @@ namespace KaitoCo
         [Sirenix.OdinInspector.ReadOnly] [SerializeField] private List<BulletPool> bulletPools;
         [Sirenix.OdinInspector.ReadOnly][SerializeField] private List<BulletPoolTemplate> bulletPoolTemplates;
         private TransformAccessArray[] bulletTransformCollection;
+        private BulletDataBuilder bulletBuilder;
         private NativeArray<BulletData>[] bulletDataCollection;
         private int[] bulletIndex;
         [SerializeField] private Transform bulletFirePoint;
@@ -48,7 +49,7 @@ namespace KaitoCo
                 maxBulletsPooledPatterns[i] = pattern.maxBulletsPooled;
             }
 
-            var bulletBuilder = new BulletDataBuilder();
+            bulletBuilder = new BulletDataBuilder();
 
             bulletDataCollection = bulletBuilder.GetDataCollections(maxBulletsPooledPatterns, patternMaster.patterns.Count, Allocator.Persistent);
             bulletTransformCollection = bulletBuilder.GetTransformAccessArrays(maxBulletsPooledPatterns, patternMaster.patterns.Count);
@@ -214,6 +215,7 @@ namespace KaitoCo
 
         private void OnDestroy()
         {
+            bulletBuilder.Dispose();
             foreach (var pool in bulletPools)
             {
                 pool.Dispose();
@@ -244,7 +246,6 @@ namespace KaitoCo
             {
                 bulletTransformCollection[i] = new TransformAccessArray(individualCapacity[i]);
             }
-
             return bulletTransformCollection;
         }
 
@@ -256,7 +257,7 @@ namespace KaitoCo
             {
                 bulletDataCollection[i] = new NativeArray<BulletData>(individualCapacity[i], allocatorType);
             }
-
+            
             return bulletDataCollection;
         }
 
@@ -272,6 +273,18 @@ namespace KaitoCo
             }
 
             return bulletPoolTemplates;
+        }
+
+        public void Dispose()
+        {
+            foreach (var transformAccessArray in bulletTransformCollection)
+            {
+                transformAccessArray.Dispose();
+            }
+            foreach (var nativeArray in bulletDataCollection)
+            {
+                nativeArray.Dispose();
+            }
         }
     }
 }

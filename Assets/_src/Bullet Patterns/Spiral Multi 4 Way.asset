@@ -54,7 +54,7 @@ MonoBehaviour:
     maxBulletsPooled: 250
   - bulletPrefab: {fileID: 8149134337374371219, guid: e4f1f51daf27e414da110b2a76a8c85a, type: 3}
     useLockOn: 0
-    fireRate: 0.1
+    fireRate: 0.2
     spinRate: 2000
     initialRotation: 0
     accuracy: 1
