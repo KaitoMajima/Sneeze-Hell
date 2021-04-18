@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6f2488b5b231a14e8c4452941651d8c, type: 3}
-  m_Name: Spread LockOn
+  m_Name: Fork
   m_EditorClassIdentifier: 
   patterns:
-  - bulletPrefab: {fileID: 8149134337374371219, guid: c0e08c032965021439ee84e2a42fde09, type: 3}
-    useLockOn: 1
-    fireRate: 0.04
+  - bulletPrefab: {fileID: 8149134337374371219, guid: 2d27b4bac3452dd44a5bfc255c0f0c52, type: 3}
+    useLockOn: 0
+    fireRate: 0.5
     spinRate: 0
     initialRotation: 0
-    accuracy: 0.68
-    accuracyAngleRange: {x: -20, y: 20}
-    bulletsPerShot: 1
-    maxArrayAngleRange: 360
+    accuracy: 1
+    accuracyAngleRange: {x: 0, y: 0}
+    bulletsPerShot: 5
+    maxArrayAngleRange: 180
     isBurst: 0
     burstDuration: 0
     BurstShotCount: 0
-    maxBulletsPooled: 250
+    maxBulletsPooled: 50

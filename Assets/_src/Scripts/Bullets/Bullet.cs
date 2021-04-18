@@ -53,6 +53,7 @@ namespace KaitoCo
         private Coroutine bulletLifetimeCoroutine;
         private bool wasEnabledLastFrame;
 
+        
         public Action<IActor, IDamageable, Bullet> OnBulletHitDamageable;
         private void Start()
         {
@@ -137,6 +138,7 @@ namespace KaitoCo
             Movement.Move(ref data.BulletState.MovementState, data.BulletSettings.MovementSettings, data.MovementInput.MoveVector, deltaTime);
             transform.position += (Vector3)data.BulletState.MovementState.Velocity;
             Movement.SetPosition(ref data.BulletState.MovementState, transform.position);
+
         }
     }
 }

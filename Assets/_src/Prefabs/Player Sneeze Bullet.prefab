@@ -45,16 +45,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 1
-  m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0, b: 0.43551683, a: 1}
-  m_Intensity: 0.55
-  m_LightVolumeIntensity: 1
+  m_FalloffIntensity: 0.762
+  m_Color: {r: 0.3647059, g: 1, b: 0.3882353, a: 1}
+  m_Intensity: 0.72
+  m_LightVolumeIntensity: 3.05
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: e76d0c76
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
-  m_OverlapOperation: 1
+  m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3
+  m_PointLightOuterRadius: 1.39
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -118,10 +118,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8017237839963926054}
   - component: {fileID: 6291656736847172779}
-  - component: {fileID: 5249114353991987474}
   - component: {fileID: 6276924322155811578}
+  - component: {fileID: 1731879787369884357}
   m_Layer: 0
-  m_Name: Enemy Bullet 2
+  m_Name: Player Sneeze Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,8 +184,8 @@ SpriteRenderer:
   m_SortingLayerID: -1642215687
   m_SortingLayer: 2
   m_SortingOrder: -2
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8962264, g: 0.13105197, b: 0.27148506, a: 0.7607843}
+  m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
+  m_Color: {r: 0.36320752, g: 1, b: 0.38641644, a: 0.7607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -195,22 +195,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5249114353991987474
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8149134337374371219}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.31462628
 --- !u!114 &6276924322155811578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,11 +223,37 @@ MonoBehaviour:
       bulletDamage: 50
       BulletLifeTime: 5
       MovementSettings:
-        MaxSpeed: 4
+        MaxSpeed: 15
         ZeroToMaxSpeed: 0
         MaxSpeedToZero: 0
     MovementInput:
       MoveVector: {x: 0, y: 0}
+--- !u!61 &1731879787369884357
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149134337374371219}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.8828125}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &8304525880572642762
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +265,7 @@ GameObject:
   - component: {fileID: 1119990136759235034}
   - component: {fileID: 7069415518556679721}
   m_Layer: 0
-  m_Name: Enemy Bullet (1)
+  m_Name: Player Bullet (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,7 +326,7 @@ SpriteRenderer:
   m_SortingLayerID: -1642215687
   m_SortingLayer: 2
   m_SortingOrder: -1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 2747690628134850419, guid: a9716c16a44a94eed9b5c90fbf4d9bdd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

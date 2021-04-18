@@ -210,7 +210,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.27614495
 --- !u!114 &6276924322155811578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,11 +234,14 @@ MonoBehaviour:
         isXFlipped: 0
         isYFlipped: 0
         Velocity: {x: 0, y: 0}
+        Acceleration: {x: 0, y: 0}
     BulletSettings:
       bulletDamage: 50
       BulletLifeTime: 5
       MovementSettings:
-        MovementSpeed: 6
+        MaxSpeed: 60
+        ZeroToMaxSpeed: 20
+        MaxSpeedToZero: 0
     MovementInput:
       MoveVector: {x: 0, y: 0}
 --- !u!1 &8304525880572642762

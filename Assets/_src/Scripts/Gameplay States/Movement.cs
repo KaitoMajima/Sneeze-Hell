@@ -10,12 +10,62 @@ namespace KaitoCo
 
         public static void Move(ref MovementState state, in MovementSettings settings, in MovementInput input, float deltaTime)
         {
-            state.Velocity = input.MoveVector * (settings.MovementSpeed * deltaTime);
+            Accelerate(ref state.Velocity, input.MoveVector, settings.AccelerationRate,  settings.MaxSpeed, deltaTime);
+            Decelerate(ref state.Velocity, input.MoveVector, settings.DecelerationRate, deltaTime);
         }
         
         public static void Move(ref MovementState state, in MovementSettings settings, in Vector2 input, float deltaTime)
         {
-            state.Velocity = input * (settings.MovementSpeed * deltaTime);
+            if(input.magnitude > 0)
+                state.Velocity += input * (Mathf.Min(settings.AccelerationRate, settings.MaxSpeed) * deltaTime);
+            else
+                state.Velocity += Vector2.one * (Mathf.Max(settings.DecelerationRate, 0) * deltaTime);
+        }
+
+        private static void Accelerate(ref Vector2 velocity, in Vector2 input, float acceleration,  float maxSpeed, float deltaTime)
+        {
+            if(Mathf.Abs(input.x) > 0)
+            {
+                velocity.x += input.x * (acceleration * deltaTime);
+                velocity.x = Mathf.Clamp(velocity.x, -maxSpeed, maxSpeed); 
+            }
+            if(Mathf.Abs(input.y) > 0)
+            {
+                velocity.y += input.y * (acceleration * deltaTime);
+                velocity.y = Mathf.Clamp(velocity.y, -maxSpeed, maxSpeed);
+            }
+        }
+
+        public static void Decelerate(ref Vector2 velocity, in Vector2 input, float deceleration, float deltaTime)
+        {
+            if(Mathf.Abs(input.x) < float.Epsilon)
+            {
+                if(velocity.x >= 0)
+                {
+                    velocity.x += (deceleration * deltaTime);
+                    velocity.x = Mathf.Max(velocity.x, 0);
+                }
+                else
+                {
+                    velocity.x -= (deceleration * deltaTime);
+                    velocity.x = Mathf.Min(velocity.x, 0);
+                }
+
+            }
+            
+            if(Mathf.Abs(input.y) < float.Epsilon)
+            {
+                if(velocity.y >= 0)
+                {
+                    velocity.y += (deceleration * deltaTime);
+                    velocity.y = Mathf.Max(velocity.y, 0);
+                }
+                else
+                {
+                    velocity.y -= (deceleration * deltaTime);
+                    velocity.y = Mathf.Min(velocity.y, 0);
+                }
+            }
         }
         public static void FlipHorizontally(ref MovementState state, float movementValue)
         {
@@ -53,18 +103,24 @@ namespace KaitoCo
         public Vector3 Position;
         public Vector3 LocalScale;
         public bool isXFlipped;
-
         public bool isYFlipped;
         public Vector2 Velocity;
+        public Vector2 Acceleration;
         
     }
     [Serializable]
     public struct MovementSettings
     {
-        public float MovementSpeed;
+        public float MaxSpeed;
+        public float ZeroToMaxSpeed;
+        public float MaxSpeedToZero;
+        public float AccelerationRate => MaxSpeed / ZeroToMaxSpeed;
+        public float DecelerationRate => -MaxSpeed / MaxSpeedToZero;
         public static MovementSettings Default = new MovementSettings()
         {
-            MovementSpeed = 8
+            MaxSpeed = 8,
+            ZeroToMaxSpeed = 1,
+            MaxSpeedToZero = 1
         };
     }
     [Serializable]

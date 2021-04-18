@@ -6,6 +6,12 @@ namespace KaitoCo
 {
     public class Enemy : MonoBehaviour, IActor
     {
-        private int valor;
+        private IDetectionBehaviour detectionBehaviour;
+        private IShootBehaviour shootBehaviour;
+
+        private void Start()
+        {
+
+        }
     }
 }

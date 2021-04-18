@@ -27,13 +27,11 @@ namespace KaitoCo
         [SerializeField] private Transform bulletTarget;
 
         [SerializeField] private BulletPatternState[] bulletPatternStates;
-        public void OnShootTrigger(GameObject prefab, Transform[] bulletFirePoints, Transform holder, Transform target = null)
+        public void OnShootTrigger(Transform bulletFirePoint, Transform holder, Transform target = null)
         {
-
             bulletOwner = holder;
-            bulletTarget = target;
-            
-   
+            if(target != null)
+                bulletTarget = target;
         }
 
         private void Start()
