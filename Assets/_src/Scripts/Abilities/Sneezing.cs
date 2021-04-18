@@ -20,6 +20,7 @@ namespace KaitoCo
         [SerializeField] private RotateTowardsDirection[] indicationsRotator;
         private float xSneezeRandomValue;
         private float ySneezeRandomValue;
+        public Action<int> OnCountdownChanged;
 
         private void Start()
         {
@@ -79,7 +80,6 @@ namespace KaitoCo
                 if(seconds < float.Epsilon)
                     seconds = 0;
                 
-                Debug.Log(seconds);
                 if(indicationTime != null)
                 {
                     if(seconds < indicationTime && !indicationPassed)
@@ -87,8 +87,9 @@ namespace KaitoCo
                         onIndicationPassedCallback?.Invoke();
                         indicationPassed = true;
                     }
+                    OnCountdownChanged?.Invoke(Mathf.CeilToInt(seconds));    
                 }
-                    
+                
                 yield return null;
             }
             onFinishCallback?.Invoke();

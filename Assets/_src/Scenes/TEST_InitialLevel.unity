@@ -4874,6 +4874,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 611649288, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 415086035}
+    - target: {fileID: 1938739048, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_fontSize
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938739048, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 34cef4d9ad306fe4b8058f2af8453705, type: 2}
+    - target: {fileID: 1938739048, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938739048, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938739048, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8648243385562281832, guid: 34cef4d9ad306fe4b8058f2af8453705, type: 2}
+    - target: {fileID: 1938739048, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 2496784251
+      objectReference: {fileID: 0}
     - target: {fileID: 1391779881192704757, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4954,6 +4982,30 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 2115438394}
+    - target: {fileID: 1391779882317993988, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.03010106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882317993988, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 0.65850705
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.03010106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 0.65850705
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.03010106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 0.65850705
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c475e613667774e99eb9be73e00038, type: 3}
 --- !u!1001 &7892863933317189143
