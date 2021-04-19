@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
+using Sirenix.OdinInspector;
 
 namespace KaitoCo
 {
@@ -12,7 +13,8 @@ namespace KaitoCo
         [SerializeField] private PlayerInput playerInput;
         [SerializeField] private Rigidbody2D playerRigidbody;
         [SerializeField] private Transform detectionTransform;
-
+        [SerializeField] private Transform checkpointTransform;
+        [SerializeField] private PlayerCinematics playerCinematics;
         [SerializeField] private float groundDetectionRadius;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float maxFallToleration = 0.4f;
@@ -96,7 +98,7 @@ namespace KaitoCo
 
         private void InitiateSneeze(DashSettings sneezeDashSettings, Vector2 input)
         {
-            
+            movementState.Velocity = Vector2.zero;
             Movement.Pulse(ref movementState, sneezeDashSettings.movementSettings, input);
             playerRigidbody.velocity = movementState.Velocity;
 
@@ -124,7 +126,8 @@ namespace KaitoCo
                 seconds -= Time.deltaTime;
                 yield return null;
             }
-            Die();
+            Fall();
+
             fallingCoroutine = null;
         }
 
@@ -135,6 +138,14 @@ namespace KaitoCo
 
             StopCoroutine(fallingCoroutine);
             Debug.Log("Back from the dead!");
+        }
+
+        private void Fall()
+        {
+            movementState.Velocity = Vector2.zero;
+            moveInput.MoveVector = Vector2.zero;
+            playerCinematics.fallingCutscene.Play();
+            TryTakeDamage(100, this);
         }
         public bool TryTakeDamage(int damage, IActor actor)
         {
@@ -162,5 +173,33 @@ namespace KaitoCo
 
             Gizmos.DrawWireSphere(detectionTransform.position, groundDetectionRadius);
         }
+
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            if(!collider.isTrigger)
+                return;
+            
+            if(!collider.TryGetComponent(out IslandCheckpoint island))
+                return;
+
+            checkpointTransform = island.Checkpoint;
+        }
+
+        #region Signal Receiver Methods
+        public void ReturnToCheckpoint()
+        {
+            transform.position = checkpointTransform.position;
+        }
+
+        public void ActivatePlayerControls()
+        {
+            movementAction?.Enable();
+        }
+
+        public void DeactivatePlayerControls()
+        {
+            movementAction?.Disable();
+        }
+        #endregion
     }
 }
