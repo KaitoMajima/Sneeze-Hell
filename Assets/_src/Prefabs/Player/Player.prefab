@@ -168,15 +168,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f86416ab95f999542a1ddbeb0281d240, type: 2}
-  m_sharedMaterial: {fileID: 6441833051370534577, guid: f86416ab95f999542a1ddbeb0281d240, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 34cef4d9ad306fe4b8058f2af8453705, type: 2}
+  m_sharedMaterial: {fileID: 8648243385562281832, guid: 34cef4d9ad306fe4b8058f2af8453705, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1624369019
-  m_fontColor: {r: 0.48273405, g: 0.9056604, b: 0.82117796, a: 0.3764706}
+    rgba: 2496784251
+  m_fontColor: {r: 0.48273405, g: 0.9056604, b: 0.82117796, a: 0.5803922}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -193,8 +193,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.1
-  m_fontSizeBase: 1.1
+  m_fontSize: 1.4
+  m_fontSizeBase: 1.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -336,10 +336,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInput: {fileID: 1391779881192704761}
   playerRigidbody: {fileID: 1391779881192704760}
+  detectionTransform: {fileID: 1391779881192704762}
+  groundDetectionRadius: 0.2
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  playerState: 0
   movementSettings:
     MaxSpeed: 0.26
     ZeroToMaxSpeed: 0.12
     MaxSpeedToZero: 0.1
+  healthState:
+    Health: 500
+    MaxHealth: 500
   sneezeDashSettings:
     movementSettings:
       MaxSpeed: 0
@@ -349,7 +358,6 @@ MonoBehaviour:
     dampTime: 0
     cooldownTime: 0
   sneezeAnimation: {fileID: 1391779881192704767}
-  playerState: 0
 --- !u!114 &1391779881192704761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,7 +518,7 @@ MonoBehaviour:
     loopType: 0
   tweenVectorSettings:
     startValue: {x: 0, y: 0, z: 0}
-    endValue: {x: 0, y: 0, z: 720}
+    endValue: {x: 0, y: 0, z: 1080}
 --- !u!1 &1391779881891842117
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,8 +829,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.03010106, y: -0.29945928, z: -0.0001}
-    m_Extent: {x: 0.9271717, y: 0.65850705, z: 0.0001}
+    m_Center: {x: -0.03010112, y: -0.29945928, z: -0.0001}
+    m_Extent: {x: 0.9271717, y: 0.6585071, z: 0.0001}
 --- !u!114 &1391779882317993991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +933,7 @@ MonoBehaviour:
     loopType: 1
   tweenVectorSettings:
     startValue: {x: 3.5, y: 0}
-    endValue: {x: 4.5, y: 0}
+    endValue: {x: 5.5, y: 0}
 --- !u!1 &1391779882670367108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,8 +1024,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.03010106, y: -0.29945928, z: -0.0001}
-    m_Extent: {x: 0.9271717, y: 0.65850705, z: 0.0001}
+    m_Center: {x: -0.03010112, y: -0.29945928, z: -0.0001}
+    m_Extent: {x: 0.9271717, y: 0.6585071, z: 0.0001}
 --- !u!114 &1391779882670367114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1120,7 +1128,7 @@ MonoBehaviour:
     loopType: 1
   tweenVectorSettings:
     startValue: {x: 5, y: 0}
-    endValue: {x: 6, y: 0}
+    endValue: {x: 7, y: 0}
 --- !u!1 &1391779882675959897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1642215687
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4, type: 3}
   m_Color: {r: 0.925, g: 0.682, b: 0.624, a: 1}
   m_FlipX: 0
@@ -1227,7 +1235,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391779882675959897}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5994632c7759c3f43bcdfa5ef00b13e0, type: 3}
   m_Name: 
@@ -1330,8 +1338,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.03010106, y: -0.29945928, z: -0.0001}
-    m_Extent: {x: 0.9271717, y: 0.65850705, z: 0.0001}
+    m_Center: {x: -0.03010112, y: -0.29945928, z: -0.0001}
+    m_Extent: {x: 0.9271717, y: 0.6585071, z: 0.0001}
 --- !u!114 &1391779882791194423
 MonoBehaviour:
   m_ObjectHideFlags: 0

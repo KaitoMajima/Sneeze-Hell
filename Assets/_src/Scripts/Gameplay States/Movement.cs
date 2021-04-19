@@ -34,6 +34,15 @@ namespace KaitoCo
             }
         }
 
+        public static void Pulse(ref MovementState state, in MovementSettings settings, in Vector2 input)
+        {
+            if(Mathf.Abs(input.x) > 0)
+                state.Velocity.x += input.x * settings.MaxSpeed;
+            
+            if(Mathf.Abs(input.y) > 0)
+                state.Velocity.y += input.y * settings.MaxSpeed;
+            
+        }
         public static void Decelerate(ref Vector2 velocity, in Vector2 input, float deceleration, float deltaTime)
         {
             if(Mathf.Abs(input.x) < float.Epsilon)

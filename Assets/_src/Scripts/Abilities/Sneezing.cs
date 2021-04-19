@@ -20,6 +20,7 @@ namespace KaitoCo
         [SerializeField] private RotateTowardsDirection[] indicationsRotator;
         private float xSneezeRandomValue;
         private float ySneezeRandomValue;
+        private Vector2 sneezeRandomVector;
         public Action<int> OnCountdownChanged;
 
         private void Start()
@@ -41,15 +42,16 @@ namespace KaitoCo
             if(ySneezeRandomValue < float.Epsilon && ySneezeRandomValue > -float.Epsilon)
                 ySneezeRandomValue = 1;
             
+            sneezeRandomVector = new Vector2(xSneezeRandomValue, ySneezeRandomValue).normalized;
             foreach (var indicationRotator in indicationsRotator)
             {
-                indicationRotator.Rotate(new Vector2(xSneezeRandomValue, ySneezeRandomValue));
+                indicationRotator.Rotate(sneezeRandomVector);
             }
         }
         private void InitateCooldown()
         {
             StartCoroutine(CountDown(sneezingCooldown, InitateCountdown));
-            player.onInitiateSneeze?.Invoke(sneezeDashSettings, new Vector2(xSneezeRandomValue, ySneezeRandomValue));
+            player.onInitiateSneeze?.Invoke(sneezeDashSettings, sneezeRandomVector);
             shootBehaviour.ShootingEnabled = true;
             shootBehaviour.OnShootTrigger(bulletFirePoint, shooterHolder);
             HideIndication();

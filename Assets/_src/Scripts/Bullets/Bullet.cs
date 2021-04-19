@@ -78,6 +78,13 @@ namespace KaitoCo
                 
         }
 
+        public void MarkForDestruction()
+        {
+            if(!usePooling || !wasEnabledLastFrame)
+                return;
+            if(bulletImpactPrefab != null)
+                Instantiate(bulletImpactPrefab, transform.position, Quaternion.identity);
+        }
         private IEnumerator LifetimeCountdown(float seconds, Action<float> callback)
         {
             while(seconds > 0)
