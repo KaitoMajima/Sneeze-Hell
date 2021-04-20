@@ -15,6 +15,9 @@ namespace KaitoCo
         [SerializeField] private Transform detectionTransform;
         [SerializeField] private Transform checkpointTransform;
         [SerializeField] private PlayerCinematics playerCinematics;
+        [SerializeField] private TweenController[] damageAnimation;
+        [SerializeField] private SendAudio damageSound;
+        [SerializeField] private SendAudio deathSound;
         [SerializeField] private float groundDetectionRadius;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float maxFallToleration = 0.4f;
@@ -26,7 +29,7 @@ namespace KaitoCo
         public PlayerState playerState;
         [SerializeField] private MovementSettings movementSettings = MovementSettings.Default;
         public Action onSneezeRecover;
-        [SerializeField] private HealthState healthState = HealthState.Default;
+        public HealthState healthState = HealthState.Default;
         [SerializeField] private DashSettings sneezeDashSettings;
         [SerializeField] private TweenController sneezeAnimation;
         public enum PlayerState
@@ -137,7 +140,6 @@ namespace KaitoCo
                 return;
 
             StopCoroutine(fallingCoroutine);
-            Debug.Log("Back from the dead!");
         }
 
         private void Fall()
@@ -157,7 +159,15 @@ namespace KaitoCo
             {
                 healthState.Health = 0;
                 Die();
-            } 
+            }
+            else
+            {
+                foreach (var animation in damageAnimation)
+                {
+                    animation.Activate();
+                }
+                damageSound?.TriggerSound();
+            }
             
             return true;
         }
@@ -165,6 +175,7 @@ namespace KaitoCo
         private void Die()
         {
             Debug.Log("ded");
+            deathSound?.TriggerSound();
         }
 
         private void OnDrawGizmosSelected()

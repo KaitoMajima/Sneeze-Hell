@@ -8,10 +8,9 @@ namespace KaitoCo
     public class SendImpulse : MonoBehaviour
     {
         [SerializeField] private CinemachineImpulseSource impulseSource;
-
+        
         public void TriggerImpulse()
         {
-            Debug.Log("Firing");
             impulseSource.GenerateImpulse(Vector2.up);
         }
 
