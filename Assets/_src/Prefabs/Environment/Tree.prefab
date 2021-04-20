@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8653908192397903425}
   - component: {fileID: 8653908192397903424}
   - component: {fileID: 8653908192397903427}
+  - component: {fileID: 1680872272553416577}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.44653898, b: 0.1462264, a: 0.5686275}
+  m_Color: {r: 0.8509804, g: 0.57254905, b: 0.1462264, a: 0.5686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,6 +101,28 @@ MonoBehaviour:
   light2D: {fileID: 8653908192708369966}
   objToDisable: {fileID: 8653908192708369964}
   cullType: 1
+--- !u!114 &1680872272553416577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653908192397903454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cb6518674035e4bb96018881880c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingTransform: {fileID: 8653908192397903425}
+  playOnStart: 1
+  tweenSettings:
+    duration: 3
+    easeType: 4
+    useLoops: 1
+    loopType: 1
+  tweenVectorSettings:
+    startValue: {x: -0.07, y: 6.05}
+    endValue: {x: 0.1, y: 6.22}
 --- !u!1 &8653908192428450550
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,6 +134,7 @@ GameObject:
   - component: {fileID: 8653908192428450553}
   - component: {fileID: 8653908192428450552}
   - component: {fileID: 8653908192428450555}
+  - component: {fileID: 943396186773834318}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -175,7 +199,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.44653898, b: 0.1462264, a: 0.5686275}
+  m_Color: {r: 0.8509804, g: 0.57254905, b: 0.1462264, a: 0.5686275}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -200,6 +224,28 @@ MonoBehaviour:
   light2D: {fileID: 8653908193592031280}
   objToDisable: {fileID: 8653908193592031246}
   cullType: 1
+--- !u!114 &943396186773834318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653908192428450550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cb6518674035e4bb96018881880c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingTransform: {fileID: 8653908192428450553}
+  playOnStart: 1
+  tweenSettings:
+    duration: 3
+    easeType: 4
+    useLoops: 1
+    loopType: 1
+  tweenVectorSettings:
+    startValue: {x: -1.78, y: 7.28}
+    endValue: {x: -1.9, y: 7.65}
 --- !u!1 &8653908192578376346
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,6 +564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8653908192729249958}
   - component: {fileID: 8653908192729249961}
+  - component: {fileID: 6435409386348462957}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Untagged
@@ -591,6 +638,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6435409386348462957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653908192729249959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cb6518674035e4bb96018881880c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingTransform: {fileID: 8653908192729249958}
+  playOnStart: 1
+  tweenSettings:
+    duration: 3
+    easeType: 4
+    useLoops: 1
+    loopType: 1
+  tweenVectorSettings:
+    startValue: {x: 1.61, y: 7.55}
+    endValue: {x: 1.75, y: 8}
 --- !u!1 &8653908193019623821
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +708,7 @@ GameObject:
   - component: {fileID: 8653908193032906916}
   - component: {fileID: 8653908193032906919}
   - component: {fileID: 8653908193032906918}
+  - component: {fileID: 8664736758254730331}
   m_Layer: 0
   m_Name: Square (3)
   m_TagString: Untagged
@@ -728,6 +798,28 @@ MonoBehaviour:
   light2D: {fileID: 8653908193182791183}
   objToDisable: {fileID: 8653908193182791181}
   cullType: 1
+--- !u!114 &8664736758254730331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8653908193032906917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09cb6518674035e4bb96018881880c79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingTransform: {fileID: 8653908193032906916}
+  playOnStart: 1
+  tweenSettings:
+    duration: 3
+    easeType: 4
+    useLoops: 0
+    loopType: 1
+  tweenVectorSettings:
+    startValue: {x: 3.47, y: 5.5}
+    endValue: {x: 3.6, y: 6.4}
 --- !u!1 &8653908193167791449
 GameObject:
   m_ObjectHideFlags: 0

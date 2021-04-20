@@ -9,15 +9,19 @@ namespace KaitoCo
     public class Sneezing : MonoBehaviour
     {
         [SerializeField] private Player player;
+        [SerializeField] private Transform bulletFirePoint;
+        [SerializeField] private Transform shooterHolder;
+        [SerializeField] private BulletPatternBehaviour shootBehaviour;
+        [SerializeField] private TweenController[] indicationsAnimation;
+        [SerializeField] private RotateTowardsDirection[] indicationsRotator;
+        [SerializeField] private TweenController sneezeDangerAnimation;
+        [SerializeField] private SendAudio sneezingPrepare;
+        [SerializeField] private SendAudio sneezingShoot;
+        [SerializeField] private SendImpulse sneezingImpulse;
         [SerializeField] private float sneezingCountdown = 10;
         [SerializeField] private float sneezingIndication = 2;
         [SerializeField] private float sneezingCooldown = 1;
         [SerializeField] private DashSettings sneezeDashSettings = DashSettings.Default;
-        [SerializeField] private BulletPatternBehaviour shootBehaviour;
-        [SerializeField] private Transform bulletFirePoint;
-        [SerializeField] private Transform shooterHolder;
-        [SerializeField] private TweenController[] indicationsAnimation;
-        [SerializeField] private RotateTowardsDirection[] indicationsRotator;
         private float xSneezeRandomValue;
         private float ySneezeRandomValue;
         private Vector2 sneezeRandomVector;
@@ -54,6 +58,9 @@ namespace KaitoCo
             player.onInitiateSneeze?.Invoke(sneezeDashSettings, sneezeRandomVector);
             shootBehaviour.ShootingEnabled = true;
             shootBehaviour.OnShootTrigger(bulletFirePoint, shooterHolder);
+            sneezingShoot?.TriggerSound();
+            sneezingImpulse?.TriggerImpulse();
+            
             HideIndication();
         }
 
@@ -87,6 +94,8 @@ namespace KaitoCo
                     if(seconds < indicationTime && !indicationPassed)
                     {
                         onIndicationPassedCallback?.Invoke();
+                        sneezingPrepare?.TriggerSound();
+                        sneezeDangerAnimation?.Activate();
                         indicationPassed = true;
                     }
                     OnCountdownChanged?.Invoke(Mathf.CeilToInt(seconds));    
@@ -95,6 +104,7 @@ namespace KaitoCo
                 yield return null;
             }
             onFinishCallback?.Invoke();
+            sneezeDangerAnimation?.Deactivate();
         }
 
     }

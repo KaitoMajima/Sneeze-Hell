@@ -38,8 +38,11 @@ namespace KaitoCo
         [Title("Dependencies")]
         [SerializeField] private GameObject bulletImpactPrefab;
 
+        [Header("VFX")]
+        [SerializeField] private SendImpulse bulletImpulse;
+
         [Header("SFX")]
-        [SerializeField] private SendAudio bulletImpactSound;
+        [SerializeField] private SendAudio bulletFireSound;
 
         [Space]
 
@@ -52,20 +55,23 @@ namespace KaitoCo
         private Type bulletOwnerType;
         private Coroutine bulletLifetimeCoroutine;
         private bool wasEnabledLastFrame;
-
+        private bool enabledOnce;
         private float lifetime;
         public Action<IActor, IDamageable, Bullet> OnBulletHitDamageable;
         private void Start()
         {
             lifetime = bulletData.BulletSettings.BulletLifeTime;
-            bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(lifetime, (seconds) => {lifetime = seconds;}));
+            if(!usePooling)
+                bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(lifetime, (seconds) => {lifetime = seconds;}));
             bulletOwnerType = bulletOwner.GetComponent<IActor>().GetType();
+
+            if(!enabledOnce)
+                bulletFireSound?.TriggerSound();
+            
         }
         private void Explode()
         {
-            bulletImpactSound?.TriggerSound();
-            
-            
+            enabledOnce = true;
             if(!usePooling)
                 Destroy(gameObject);
             else
@@ -73,7 +79,7 @@ namespace KaitoCo
                 if(bulletImpactPrefab != null)
                     Instantiate(bulletImpactPrefab, transform.position, Quaternion.identity);
                 gameObject.SetActive(false);
-                    
+                
             }
                 
         }
@@ -87,12 +93,17 @@ namespace KaitoCo
         }
         private IEnumerator LifetimeCountdown(float seconds, Action<float> callback)
         {
+            bulletFireSound?.TriggerSound();
+            bulletImpulse?.TriggerImpulse();
+
+
             while(seconds > 0)
             {
                 seconds -= Time.deltaTime;
                 callback?.Invoke(seconds);
                 yield return null;
             }
+            
             Explode();
         }
 
@@ -136,8 +147,9 @@ namespace KaitoCo
                     StopCoroutine(bulletLifetimeCoroutine);
                 lifetime = bulletData.BulletSettings.BulletLifeTime;
                 bulletLifetimeCoroutine = StartCoroutine(LifetimeCountdown(lifetime, (seconds) => {lifetime = seconds;}));
-            }
                 
+            }
+            
             wasEnabledLastFrame = true;
         }
 

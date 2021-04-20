@@ -51,6 +51,7 @@ namespace KaitoCo
 
         public override void Deactivate()
         {
+            scaledTransform.DOKill();
             scaledTransform.DOScale(originalScale, tweenSettings.duration).SetEase(tweenSettings.easeType);
         }
 
