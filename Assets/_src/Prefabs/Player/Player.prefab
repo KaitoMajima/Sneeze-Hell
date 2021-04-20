@@ -271,7 +271,7 @@ MonoBehaviour:
     loopType: 1
   tweenScaleValueSettings:
     scaleType: 0
-    rateScale: 2
+    rateScale: 1.75
     fixedScale: {x: 1, y: 1}
 --- !u!1 &562511945345304242
 GameObject:
@@ -346,7 +346,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7139092643643741615, guid: ec1ac68b7305f474e9a6591c72e356ee, type: 2}
-  m_audioClip: {fileID: 8300000, guid: f91022b79fbd16d4394c27fe3bfee235, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 482516002490ca742a19eb3e8973421f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.22
   m_Pitch: 1
@@ -1991,8 +1991,8 @@ MonoBehaviour:
   m_ImpulseDefinition:
     m_ImpulseChannel: 1
     m_RawSignal: {fileID: 11400000, guid: e66377d88cb9f2d4cbdeeedee7fb8b8b, type: 2}
-    m_AmplitudeGain: 1
-    m_FrequencyGain: 1
+    m_AmplitudeGain: 1.2
+    m_FrequencyGain: 2
     m_RepeatMode: 0
     m_Randomize: 1
     m_TimeEnvelope:
@@ -2010,7 +2010,7 @@ MonoBehaviour:
         m_RotationOrder: 4
       m_AttackTime: 0
       m_SustainTime: 0.2
-      m_DecayTime: 0.7
+      m_DecayTime: 1
       m_ScaleWithImpact: 1
       m_HoldForever: 0
     m_ImpactRadius: 100

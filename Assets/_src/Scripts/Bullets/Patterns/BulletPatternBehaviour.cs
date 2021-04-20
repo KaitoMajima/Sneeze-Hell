@@ -223,11 +223,11 @@ namespace KaitoCo
             }
             foreach (var bulletTransforms in bulletTransformCollection)
             {
-                bulletTransforms.Dispose();
+                //bulletTransforms.Dispose();
             }
             foreach (var bulletData in bulletDataCollection)
             {
-                bulletData.Dispose();
+                //bulletData.Dispose();
             }
             
         }

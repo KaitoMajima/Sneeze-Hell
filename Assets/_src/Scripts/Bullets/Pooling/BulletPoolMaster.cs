@@ -32,6 +32,8 @@ namespace KaitoCo
         {
             foreach (var bullet in bullets)
             {
+                if(bullet == null)
+                    continue;
                 var bulletScript = bullet.GetComponent<Bullet>();
                 bulletScript.MarkForDestruction();
                 MonoBehaviour.Destroy(bullet);
