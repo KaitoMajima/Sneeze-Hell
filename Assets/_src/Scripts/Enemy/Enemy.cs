@@ -9,6 +9,8 @@ namespace KaitoCo
     {
         private IDetectionBehaviour detectionBehaviour;
         private IShootBehaviour shootBehaviour;
+
+        [SerializeField] private Transform enemyMainTransform;
         [SerializeField] private TweenController[] damageAnimation;
         [SerializeField] private SendAudio damageSound;
         [SerializeField] private SendAudio deathSound;
@@ -52,7 +54,7 @@ namespace KaitoCo
         }
         private void Die()
         {
-            Destroy(gameObject);
+            Destroy(enemyMainTransform.gameObject);
             deathSound?.TriggerSound();
         }
     }

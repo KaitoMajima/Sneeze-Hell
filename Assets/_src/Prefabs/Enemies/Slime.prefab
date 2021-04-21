@@ -792,6 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13fa33298e0c084cb127bbd53f59b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMainTransform: {fileID: 5092490746366125253}
   damageAnimation:
   - {fileID: 5434457341910772137}
   damageSound: {fileID: 2641678833803026985}
@@ -819,9 +820,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.54883766}
   serializedVersion: 2
-  m_Radius: 0.72906876
+  m_Radius: 1.2779064
 --- !u!50 &5092490746366125257
 Rigidbody2D:
   serializedVersion: 4

@@ -1037,6 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13fa33298e0c084cb127bbd53f59b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMainTransform: {fileID: 5029831431921966047}
   damageAnimation:
   - {fileID: 4209683813205431619}
   damageSound: {fileID: 5741566100877657303}

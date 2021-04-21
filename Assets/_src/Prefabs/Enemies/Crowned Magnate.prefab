@@ -187,7 +187,6 @@ MonoBehaviour:
   bulletPoolTemplates: []
   bulletFirePoint: {fileID: 4190872703307975840}
   bulletOwner: {fileID: 609120281618674603}
-  bulletTarget: {fileID: 0}
   bulletPatternStates: []
 --- !u!1 &976578993022716785
 GameObject:
@@ -646,6 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13fa33298e0c084cb127bbd53f59b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMainTransform: {fileID: 3745521717299120000}
   damageAnimation:
   - {fileID: 5783373108726207147}
   - {fileID: 5322040351299909530}
@@ -1871,7 +1871,6 @@ MonoBehaviour:
   bulletPoolTemplates: []
   bulletFirePoint: {fileID: 8518922258973199527}
   bulletOwner: {fileID: 609120281618674603}
-  bulletTarget: {fileID: 0}
   bulletPatternStates: []
 --- !u!1 &7469187004625193432
 GameObject:

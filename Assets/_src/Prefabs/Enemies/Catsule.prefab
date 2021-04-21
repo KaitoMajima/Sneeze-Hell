@@ -1761,6 +1761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13fa33298e0c084cb127bbd53f59b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMainTransform: {fileID: 6442188643263827009}
   damageAnimation:
   - {fileID: 4037963037824101080}
   - {fileID: 4037963039243081982}
