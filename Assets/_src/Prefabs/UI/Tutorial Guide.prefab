@@ -96,7 +96,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1642215687
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1440525124
@@ -188,7 +188,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Every <b><u>10 seconds</u></b> you sneeze. Watch out!
+  m_text: 'Shoot enemies with the
+
+    <b><u>LEFT MOUSE BUTTON</u></b>!
+
+    Evade
+    their bullets and don''t let your health reach zero!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9b90cba318305f541a5403a6357f7f1e, type: 2}
   m_sharedMaterial: {fileID: -5848424208948509787, guid: 9b90cba318305f541a5403a6357f7f1e, type: 2}
@@ -275,6 +280,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1642215687
   m_SortingOrder: 10
   m_TargetDisplay: 0

@@ -9,11 +9,16 @@ namespace KaitoCo
     {
         [SerializeField] private PlayableDirector timeline;
 
+        private bool hasTriggered;
+
         private void OnTriggerEnter2D(Collider2D other)
         {
+            if(hasTriggered)
+                return;
             if(!other.TryGetComponent(out Player player))
                 return;
 
+            hasTriggered = true;
             timeline.Play();
         }
     }
