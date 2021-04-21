@@ -26,6 +26,7 @@ namespace KaitoCo
         private float ySneezeRandomValue;
         private Vector2 sneezeRandomVector;
         public Action<int> OnCountdownChanged;
+        private Coroutine sneezingCoroutine;
 
         private void Start()
         {
@@ -34,7 +35,7 @@ namespace KaitoCo
 
         private void InitateCountdown()
         {
-            StartCoroutine(CountDown(sneezingCountdown, InitateCooldown, sneezingIndication, ShowIndication));
+            sneezingCoroutine = StartCoroutine(CountDown(sneezingCountdown, InitateCooldown, sneezingIndication, ShowIndication));
             player.onSneezeRecover?.Invoke();
             shootBehaviour.ShootingEnabled = false;
 
@@ -54,7 +55,7 @@ namespace KaitoCo
         }
         private void InitateCooldown()
         {
-            StartCoroutine(CountDown(sneezingCooldown, InitateCountdown));
+            sneezingCoroutine = StartCoroutine(CountDown(sneezingCooldown, InitateCountdown));
             player.onInitiateSneeze?.Invoke(sneezeDashSettings, sneezeRandomVector);
             shootBehaviour.ShootingEnabled = true;
             shootBehaviour.OnShootTrigger(bulletFirePoint, shooterHolder);
@@ -105,6 +106,21 @@ namespace KaitoCo
             }
             onFinishCallback?.Invoke();
             sneezeDangerAnimation?.Deactivate();
+        }
+
+        public void ActivateSneeze()
+        {
+            InitateCountdown();
+            sneezeDangerAnimation.gameObject.SetActive(true);
+        }
+
+        public void DeactivateSneeze()
+        {
+            if(sneezingCoroutine != null)
+                StopCoroutine(sneezingCoroutine);
+            sneezeDangerAnimation.gameObject.SetActive(false);
+            shootBehaviour.ShootingEnabled = false;
+
         }
 
     }

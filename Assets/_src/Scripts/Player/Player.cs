@@ -35,7 +35,8 @@ namespace KaitoCo
         public enum PlayerState
         {
             Idle,
-            Sneezing
+            Sneezing,
+            Death
         }
         private InputAction movementAction;
         private InputAction fireAction;
@@ -151,6 +152,8 @@ namespace KaitoCo
         }
         public bool TryTakeDamage(int damage, IActor actor)
         {
+            if(playerState == PlayerState.Death)
+                return false;
             Health.Damage(ref healthState, damage);
 
             OnHealthChanged?.Invoke(healthState);
@@ -174,7 +177,11 @@ namespace KaitoCo
 
         private void Die()
         {
-            Debug.Log("ded");
+            playerState = PlayerState.Death;
+            moveInput.MoveVector = Vector2.zero;
+            movementState.Velocity = Vector2.zero;
+            playerRigidbody.simulated = false;
+            playerCinematics.deathCutscene.Play();
             deathSound?.TriggerSound();
         }
 
@@ -210,6 +217,16 @@ namespace KaitoCo
         public void DeactivatePlayerControls()
         {
             movementAction?.Disable();
+        }
+
+        public void ActivateShootingControls()
+        {
+            fireAction?.Enable();
+        }
+
+        public void DeactivateShootingControls()
+        {
+            fireAction?.Disable();
         }
         #endregion
     }

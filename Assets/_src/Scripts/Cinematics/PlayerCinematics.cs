@@ -6,5 +6,6 @@ namespace KaitoCo
     public class PlayerCinematics : MonoBehaviour
     {
         public PlayableDirector fallingCutscene;
+        public PlayableDirector deathCutscene;
     }
 }

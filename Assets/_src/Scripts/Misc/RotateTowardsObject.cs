@@ -10,6 +10,11 @@ namespace KaitoCo
 
         [SerializeField] private Transform targetTransform;
 
+        private void Start()
+        {
+            if(targetTransform == null)
+                targetTransform = FindObjectOfType<FollowReticle>().transform;
+        }
         private void Update()
         {
             Vector2 offset = targetTransform.position - rotatedTransform.position;
