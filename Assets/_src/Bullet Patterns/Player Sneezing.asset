@@ -25,4 +25,4 @@ MonoBehaviour:
     isBurst: 0
     burstDuration: 0.3
     BurstShotCount: 4
-    maxBulletsPooled: 120
+    maxBulletsPooled: 150

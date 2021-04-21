@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Intensity: 0.22
   m_LightVolumeIntensity: 3.05
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: e76d0c76
+  m_ApplyToSortingLayers: e76d0c76f9c61d9e
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -208,7 +208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletImpactPrefab: {fileID: 7278859075386493633, guid: 70e41bee76f3b7f48a7485c2d2b6acea, type: 3}
-  bulletImpactSound: {fileID: 0}
+  bulletImpulse: {fileID: 0}
+  bulletFireSound: {fileID: 0}
   usePooling: 1
   bulletData:
     BulletState:

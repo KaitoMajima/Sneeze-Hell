@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 8865662979362496264}
   - component: {fileID: 2090022969}
   - component: {fileID: 1052082127081268071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,8 +622,8 @@ MonoBehaviour:
     ZeroToMaxSpeed: 0.12
     MaxSpeedToZero: 0.1
   healthState:
-    Health: 500
-    MaxHealth: 500
+    Health: 1000
+    MaxHealth: 1000
   sneezeDashSettings:
     movementSettings:
       MaxSpeed: 0
@@ -723,9 +723,9 @@ MonoBehaviour:
   sneezingCooldown: 1.1
   sneezeDashSettings:
     movementSettings:
-      MaxSpeed: 0.3
+      MaxSpeed: 3
       ZeroToMaxSpeed: 0
-      MaxSpeedToZero: 0.8
+      MaxSpeedToZero: 1
     duration: 1
     dampTime: 0
     cooldownTime: 0
@@ -772,7 +772,7 @@ Rigidbody2D:
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -1194,7 +1194,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playOnStartTween: 0
   tweenSettings:
-    duration: 0.3
+    duration: 0.6
     easeType: 18
     useLoops: 0
     loopType: 0
@@ -1734,7 +1734,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playOnStartTween: 0
   tweenSettings:
-    duration: 0.3
+    duration: 0.6
     easeType: 18
     useLoops: 0
     loopType: 0
@@ -2370,7 +2370,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 7139092643643741615, guid: ec1ac68b7305f474e9a6591c72e356ee, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 03b96ebb0bc7c6044bb4b3171ba10a27, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f9ee1d2290ceb254db31e236b5b30ffc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.2
   m_Pitch: 1
