@@ -266,7 +266,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 7139092643643741615, guid: ec1ac68b7305f474e9a6591c72e356ee, type: 2}
   m_audioClip: {fileID: 8300000, guid: 39c40dca3106eff4b8cfe0182e0338b9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -733,7 +733,6 @@ MonoBehaviour:
   bulletPoolTemplates: []
   bulletFirePoint: {fileID: 3108957878066298090}
   bulletOwner: {fileID: 5092490746366125253}
-  bulletTarget: {fileID: 0}
   bulletPatternStates: []
 --- !u!114 &7654022173140775323
 MonoBehaviour:

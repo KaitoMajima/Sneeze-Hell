@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d507bca958b9046901a3be5961da5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {fileID: 0}
+  checkpoint: {fileID: 8884211596410818133}
 --- !u!1 &8884211596835962046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,4 +1112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d507bca958b9046901a3be5961da5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpoint: {fileID: 0}
+  checkpoint: {fileID: 3727141543579084325}

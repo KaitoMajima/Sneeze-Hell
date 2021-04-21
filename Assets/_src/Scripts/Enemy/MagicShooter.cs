@@ -22,7 +22,7 @@ namespace KaitoCo
             OnWeaponUse?.Invoke();
             
             shootBehaviour.ShootingEnabled = true;
-            shootBehaviour.OnShootTrigger(bulletFirePoint, shooterHolder.transform);
+            shootBehaviour.OnShootTrigger(bulletFirePoint, shooterHolder.transform, target);
             IsFiring = true;
 
         }

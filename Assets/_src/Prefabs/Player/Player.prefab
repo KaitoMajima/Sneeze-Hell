@@ -735,8 +735,8 @@ MonoBehaviour:
     ZeroToMaxSpeed: 0.12
     MaxSpeedToZero: 0.1
   healthState:
-    Health: 1
-    MaxHealth: 1
+    Health: 1000
+    MaxHealth: 1000
   sneezeDashSettings:
     movementSettings:
       MaxSpeed: 0

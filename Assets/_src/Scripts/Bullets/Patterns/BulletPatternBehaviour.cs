@@ -25,7 +25,7 @@ namespace KaitoCo
         private int[] bulletIndex;
         [SerializeField] private Transform bulletFirePoint;
         [SerializeField] private Transform bulletOwner;
-        [SerializeField] private Transform bulletTarget;
+        private Transform bulletTarget;
 
         [SerializeField] private BulletPatternState[] bulletPatternStates;
         public void OnShootTrigger(Transform bulletFirePoint, Transform holder, Transform target = null)

@@ -224,7 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletImpactPrefab: {fileID: 4007658716499901394, guid: ba1fd0dae23fde1469155ae1ff79c64e, type: 3}
-  bulletImpactSound: {fileID: 0}
+  bulletImpulse: {fileID: 0}
+  bulletFireSound: {fileID: 0}
   usePooling: 1
   bulletData:
     BulletState:
@@ -236,7 +237,7 @@ MonoBehaviour:
         Velocity: {x: 0, y: 0}
         Acceleration: {x: 0, y: 0}
     BulletSettings:
-      bulletDamage: 50
+      bulletDamage: 100
       BulletLifeTime: 2.4
       MovementSettings:
         MaxSpeed: 20
