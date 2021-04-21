@@ -691,7 +691,7 @@ GameObject:
   - component: {fileID: 5092490746366125256}
   - component: {fileID: 5092490746366125257}
   m_Layer: 0
-  m_Name: Slime
+  m_Name: Slime A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootingEnabled: 0
-  patternMaster: {fileID: 11400000, guid: 3edaa0f9b2c63ac469c351194676c005, type: 2}
+  patternMaster: {fileID: 11400000, guid: 6034bf1ac1642be48808452d1cddc82d, type: 2}
   maxBulletsCount: 1000
   bulletPools: []
   bulletPoolTemplates: []

@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13fa33298e0c084cb127bbd53f59b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMainTransform: {fileID: 5029831431921966047}
+  enemyMainTransform: {fileID: 8786267735078856309}
   damageAnimation:
   - {fileID: 4209683813205431619}
   damageSound: {fileID: 5741566100877657303}
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   oneShot: 1
   autoDestruct: 0
   audioSource: {fileID: 8575659665432440529}
-  pitchRange: {x: 0.8, y: 1.1}
+  pitchRange: {x: 0.5, y: 0.7}
 --- !u!82 &8575659665432440529
 AudioSource:
   m_ObjectHideFlags: 0

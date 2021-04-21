@@ -836,7 +836,7 @@ MonoBehaviour:
   sneezingCooldown: 1.1
   sneezeDashSettings:
     movementSettings:
-      MaxSpeed: 3
+      MaxSpeed: 1
       ZeroToMaxSpeed: 0
       MaxSpeedToZero: 1
     duration: 1
@@ -866,7 +866,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4842274, y: 1.4842274}
+  m_Size: {x: 1.0940133, y: 1.0940133}
   m_EdgeRadius: 0
 --- !u!50 &1391779881192704760
 Rigidbody2D:
@@ -1150,7 +1150,6 @@ MonoBehaviour:
   bulletPoolTemplates: []
   bulletFirePoint: {fileID: 1391779882066150774}
   bulletOwner: {fileID: 1391779881192704762}
-  bulletTarget: {fileID: 0}
   bulletPatternStates: []
 --- !u!1 &1391779881905414800
 GameObject:
@@ -1202,7 +1201,6 @@ MonoBehaviour:
   bulletPoolTemplates: []
   bulletFirePoint: {fileID: 1391779881013330546}
   bulletOwner: {fileID: 1391779881192704762}
-  bulletTarget: {fileID: 0}
   bulletPatternStates: []
 --- !u!1 &1391779882066150769
 GameObject:

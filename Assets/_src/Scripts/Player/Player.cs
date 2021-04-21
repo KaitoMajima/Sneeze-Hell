@@ -103,7 +103,9 @@ namespace KaitoCo
         private void InitiateSneeze(DashSettings sneezeDashSettings, Vector2 input)
         {
             movementState.Velocity = Vector2.zero;
+
             Movement.Pulse(ref movementState, sneezeDashSettings.movementSettings, input);
+            
             playerRigidbody.velocity = movementState.Velocity;
 
             playerState = Player.PlayerState.Sneezing;
@@ -217,6 +219,8 @@ namespace KaitoCo
         public void DeactivatePlayerControls()
         {
             movementAction?.Disable();
+            movementState.Velocity = Vector2.zero;
+            moveInput.MoveVector = Vector2.zero;
         }
 
         public void ActivateShootingControls()

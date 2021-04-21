@@ -42,6 +42,7 @@ namespace KaitoCo
             if(Mathf.Abs(input.y) > 0)
                 state.Velocity.y += input.y * settings.MaxSpeed;
             
+            
         }
         public static void Decelerate(ref Vector2 velocity, in Vector2 input, float deceleration, float deltaTime)
         {

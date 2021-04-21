@@ -31,6 +31,7 @@ namespace KaitoCo
         {
             IsFiring = false;
             shootBehaviour.ShootingEnabled = false;
+            
         }
         
     }
