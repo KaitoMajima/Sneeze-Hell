@@ -14487,6 +14487,14 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1066799259}
+    - target: {fileID: 2283188269914808340, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: m_text
+      value: '-- Song --
+
+        Gabberfly
+
+        by Waterflame'
+      objectReference: {fileID: 0}
     - target: {fileID: 3238410398767681945, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
       propertyPath: player
       value: 

@@ -744,7 +744,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22415034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1199,7 +1199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22431670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1703,7 +1703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22493042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2064,6 +2064,7 @@ GameObject:
   - component: {fileID: 11439282}
   - component: {fileID: 11496292}
   - component: {fileID: 11480938}
+  - component: {fileID: 3229213697085302961}
   m_Layer: 5
   m_Name: '[Graphy]'
   m_TagString: Untagged
@@ -2219,6 +2220,21 @@ MonoBehaviour:
     UnityEvents:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &3229213697085302961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7124aa22655e1094ab1b1e679963fb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugs:
+  - {fileID: 139740}
+  - {fileID: 155302}
 --- !u!1 &179256
 GameObject:
   m_ObjectHideFlags: 0
