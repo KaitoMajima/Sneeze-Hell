@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 namespace KaitoCo
 {
@@ -15,10 +16,12 @@ namespace KaitoCo
         [SerializeField] private SendAudio damageSound;
         [SerializeField] private SendAudio deathSound;
         [SerializeField] private HealthState healthState = HealthState.Default;
+        [SerializeField] private PlayableDirector deathCutscene;
         public MovementState movementState;
         private MovementInput movementInput;
         public Action<int, IActor> OnDamageTaken {get; set;}
         public Action<HealthState> OnHealthChanged;
+        private bool hasDied;
 
         private void Start()
         {
@@ -54,8 +57,18 @@ namespace KaitoCo
         }
         private void Die()
         {
-            Destroy(enemyMainTransform.gameObject);
+            if(hasDied)
+                return;
+            
+            hasDied = true;
             deathSound?.TriggerSound();
+            if(deathCutscene != null)
+            {
+                deathCutscene.Play();
+                return;
+            }
+            Destroy(enemyMainTransform.gameObject);
+            
         }
     }
 }

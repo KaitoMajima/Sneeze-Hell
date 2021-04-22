@@ -10,6 +10,7 @@ namespace KaitoCo
         public static GameManager Instance {get; private set;}
 
         public static Action OnGameOver;
+        public static Action OnGameWon;
         private void Awake()
         {
             if(Instance != null)
