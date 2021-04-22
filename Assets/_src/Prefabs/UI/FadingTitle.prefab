@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6342885122252086621}
   - component: {fileID: 3206120006896166958}
   - component: {fileID: 738208383649231936}
-  - component: {fileID: 4389084992259072788}
   m_Layer: 5
   m_Name: FadingTitle
   m_TagString: Untagged
@@ -215,24 +214,3 @@ CanvasGroup:
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
---- !u!114 &4389084992259072788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993040888777486926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8502eb4bf436945bb0553ea0500fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  afterImagePrefab: {fileID: 6927997931423418898, guid: c754396402e370840801166b5f3e7070, type: 3}
-  instantiateTransform: {fileID: 6805078603473234688}
-  playOnStart: 1
-  timerIsInclusive: 0
-  afterImageSettings:
-    afterImageMode: 1
-    afterImageCount: 1
-    afterImageInterval: 0
-    overallAfterImageTime: 0.4

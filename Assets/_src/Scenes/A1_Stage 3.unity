@@ -15335,6 +15335,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sneeze Cure
       objectReference: {fileID: 0}
+    - target: {fileID: 3199694754285817170, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457970277889366354, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_PlayableAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 62ae636525c736b4d9c7f60060c3968a, type: 2}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].key
+      value: 
+      objectReference: {fileID: -1621484932577161046, guid: 62ae636525c736b4d9c7f60060c3968a, type: 2}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[9].key
+      value: 
+      objectReference: {fileID: 39992052355401714, guid: 62ae636525c736b4d9c7f60060c3968a, type: 2}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[10].key
+      value: 
+      objectReference: {fileID: 2827487672430174284, guid: 62ae636525c736b4d9c7f60060c3968a, type: 2}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[11].key
+      value: 
+      objectReference: {fileID: -2859082412001086466, guid: 62ae636525c736b4d9c7f60060c3968a, type: 2}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[12].key
+      value: 
+      objectReference: {fileID: -5856477775804637178, guid: 62ae636525c736b4d9c7f60060c3968a, type: 2}
     - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].value
       value: 
@@ -15343,8 +15379,49 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
       objectReference: {fileID: 415086039}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].value
+      value: 
+      objectReference: {fileID: 1391779881721846371}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[9].value
+      value: 
+      objectReference: {fileID: 2646301001618156827}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[10].value
+      value: 
+      objectReference: {fileID: 2646301001618156826}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[11].value
+      value: 
+      objectReference: {fileID: 2646301001618156825}
+    - target: {fileID: 8876208530940436706, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+      propertyPath: m_SceneBindings.Array.data[12].value
+      value: 
+      objectReference: {fileID: 415086039}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+--- !u!1 &2646301001618156825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5912873444826318736, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+  m_PrefabInstance: {fileID: 2646301001618156824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2646301001618156826 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2254440458512656574, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+  m_PrefabInstance: {fileID: 2646301001618156824}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2646301001618156827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6996408684127370128, guid: aba0f27fe1ef01147a3c688bc7bd7e96, type: 3}
+  m_PrefabInstance: {fileID: 2646301001618156824}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638972182929006666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2878679755854022066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15374,7 +15451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2878679755373685095, guid: ad6cab98516eaec4c961c0f9d6011728, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -167.72
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2878679755982647393, guid: ad6cab98516eaec4c961c0f9d6011728, type: 3}
       propertyPath: orthographic size
