@@ -14506,6 +14506,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2010735748, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1066799259}
     - target: {fileID: 3238410398767681945, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
       propertyPath: player
       value: 
@@ -14611,6 +14615,17 @@ PrefabInstance:
 --- !u!114 &3238410400441083019 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 372260213800081624, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+  m_PrefabInstance: {fileID: 3238410400441083018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3238410400441083020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1037285672755873938, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
   m_PrefabInstance: {fileID: 3238410400441083018}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -14759,6 +14774,14 @@ PrefabInstance:
       value: A1_Stage 3
       objectReference: {fileID: 0}
     - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].key
+      value: 
+      objectReference: {fileID: -251724471629512468, guid: 37d477357e10883438f41f1f890fc39b, type: 2}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].value
       value: 
       objectReference: {fileID: 1391779881721846371}
@@ -14766,6 +14789,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
       objectReference: {fileID: 415086039}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].value
+      value: 
+      objectReference: {fileID: 3238410400441083020}
     - target: {fileID: 7443477775215591889, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
       propertyPath: m_RootOrder
       value: 3

@@ -773,6 +773,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &181754731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1037285672755873938, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+  m_PrefabInstance: {fileID: 3238410400441083018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &222726824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3462,6 +3473,14 @@ PrefabInstance:
       value: A1_Stage 1
       objectReference: {fileID: 0}
     - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].key
+      value: 
+      objectReference: {fileID: -251724471629512468, guid: 37d477357e10883438f41f1f890fc39b, type: 2}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].value
       value: 
       objectReference: {fileID: 691781346}
@@ -3469,6 +3488,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
       objectReference: {fileID: 415086039}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].value
+      value: 
+      objectReference: {fileID: 181754731}
     - target: {fileID: 7443477775215591889, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3682,6 +3705,8 @@ PlayableDirector:
     value: {fileID: 387500313}
   - key: {fileID: 1173057760253177706, guid: 871012cbc9b806541ac52991214af454, type: 2}
     value: {fileID: 1648547734}
+  - key: {fileID: -4456911915451658417, guid: 871012cbc9b806541ac52991214af454, type: 2}
+    value: {fileID: 181754731}
   m_ExposedReferences:
     m_References:
     - b1f593d965266bb48ad97d6404090662: {fileID: 1021422807}
@@ -11487,6 +11512,22 @@ PrefabInstance:
       propertyPath: m_LocalAABB.m_Extent.y
       value: 0.65850705
       objectReference: {fileID: 0}
+    - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.03010106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 0.65850705
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Center.x
+      value: -0.03010106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: m_LocalAABB.m_Extent.y
+      value: 0.65850705
+      objectReference: {fileID: 0}
     - target: {fileID: 1710958451254689184, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: canvasGroup
       value: 
@@ -11605,6 +11646,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830319870, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 415086035}
+    - target: {fileID: 830319870, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 917673044}
+    - target: {fileID: 2010735747, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 415086035}
+    - target: {fileID: 2010735747, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 917673044}
+    - target: {fileID: 2010735748, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1066799259}
     - target: {fileID: 3238410398767681945, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
       propertyPath: player
       value: 
@@ -11696,10 +11757,6 @@ PrefabInstance:
     - target: {fileID: 3238410399625416382, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3238410400328394141, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: TUTORIAL
       objectReference: {fileID: 0}
     - target: {fileID: 7968590261137815560, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
       propertyPath: m_IsActive
@@ -11889,6 +11946,14 @@ PrefabInstance:
       value: A1_Stage 1
       objectReference: {fileID: 0}
     - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].key
+      value: 
+      objectReference: {fileID: -251724471629512468, guid: 37d477357e10883438f41f1f890fc39b, type: 2}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].value
       value: 
       objectReference: {fileID: 691781346}
@@ -11896,6 +11961,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
       objectReference: {fileID: 415086039}
+    - target: {fileID: 3460367967804566626, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].value
+      value: 
+      objectReference: {fileID: 181754731}
     - target: {fileID: 7443477775215591889, guid: 6375993e28e2eca4c9b15319c9e31458, type: 3}
       propertyPath: m_RootOrder
       value: 3
