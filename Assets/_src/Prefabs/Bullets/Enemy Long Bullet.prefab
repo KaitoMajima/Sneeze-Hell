@@ -112,7 +112,7 @@ MonoBehaviour:
         Velocity: {x: 0, y: 0}
         Acceleration: {x: 0, y: 0}
     BulletSettings:
-      bulletDamage: 70
+      bulletDamage: 65
       BulletLifeTime: 3
       MovementSettings:
         MaxSpeed: 60

@@ -798,8 +798,9 @@ MonoBehaviour:
   damageSound: {fileID: 2641678833803026985}
   deathSound: {fileID: 4724715046708402281}
   healthState:
-    Health: 550
-    MaxHealth: 550
+    Health: 400
+    MaxHealth: 400
+  deathCutscene: {fileID: 0}
   movementState:
     Position: {x: 0, y: 0, z: 0}
     LocalScale: {x: 0, y: 0, z: 0}

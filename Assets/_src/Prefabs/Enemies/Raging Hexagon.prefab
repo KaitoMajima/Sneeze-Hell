@@ -1043,8 +1043,9 @@ MonoBehaviour:
   damageSound: {fileID: 5741566100877657303}
   deathSound: {fileID: 3775973825405120287}
   healthState:
-    Health: 5000
-    MaxHealth: 5000
+    Health: 3000
+    MaxHealth: 3000
+  deathCutscene: {fileID: 0}
   movementState:
     Position: {x: 0, y: 0, z: 0}
     LocalScale: {x: 0, y: 0, z: 0}
@@ -1341,6 +1342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 9015721138098647084}
   enemyTransform: {fileID: 5029831431921966047}
+  pointInterval: 0
   movePoints:
   - {fileID: 5378604202162132797}
   - {fileID: 1469864638493672079}

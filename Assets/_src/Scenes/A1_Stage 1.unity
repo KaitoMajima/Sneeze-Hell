@@ -14321,19 +14321,19 @@ PrefabInstance:
       objectReference: {fileID: 2115438394}
     - target: {fileID: 1391779882317993988, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
-      value: -0.03010112
+      value: -0.03010106
       objectReference: {fileID: 0}
     - target: {fileID: 1391779882317993988, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.6585071
+      value: 0.65850705
       objectReference: {fileID: 0}
     - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
-      value: -0.03010112
+      value: -0.03010106
       objectReference: {fileID: 0}
     - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.6585071
+      value: 0.65850705
       objectReference: {fileID: 0}
     - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_Enabled
@@ -14341,11 +14341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_LocalAABB.m_Center.x
-      value: -0.03010112
+      value: -0.03010106
       objectReference: {fileID: 0}
     - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.6585071
+      value: 0.65850705
       objectReference: {fileID: 0}
     - target: {fileID: 1710958451254689184, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: canvasGroup

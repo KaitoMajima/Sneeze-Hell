@@ -442,7 +442,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7016182114966986507}
   - component: {fileID: 5033767699914154423}
-  - component: {fileID: 1710958451254689184}
   - component: {fileID: 1756772890}
   - component: {fileID: 1756772888}
   m_Layer: 0
@@ -497,29 +496,11 @@ PlayableDirector:
     value: {fileID: 1391779882066150769}
   - key: {fileID: -2758276507532322511, guid: 5c19076965d9c104eac05c91c6900dd6, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -2122510836980700182, guid: 5c19076965d9c104eac05c91c6900dd6, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 90508826f2908e845910b8a1d42b07e8: {fileID: 0}
---- !u!114 &1710958451254689184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766922087198860229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b0a29eea3f331940a3bbe4936d00652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canvasGroup: {fileID: 0}
-  playOnStart: 0
-  destroyOnEndDeactivate: 0
-  tweenSettings:
-    duration: 1
-    easeType: 34
-    useLoops: 0
-    loopType: 0
 --- !u!114 &1756772890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,38 +515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Events:
     m_Signals:
-    - {fileID: 11400000, guid: 3d7483a2d87ac9b49bef607120f93efe, type: 2}
-    - {fileID: 11400000, guid: 4fb98973ce7cca348a748ae388756963, type: 2}
     - {fileID: 11400000, guid: a9d672e8fa21ca64c9d769b56bd56f86, type: 2}
     m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1710958451254689184}
-          m_TargetAssemblyTypeName: KaitoCo.UIFade, Assembly-CSharp
-          m_MethodName: Deactivate
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1710958451254689184}
-          m_TargetAssemblyTypeName: KaitoCo.UIFade, Assembly-CSharp
-          m_MethodName: Activate
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1756772888}
@@ -724,16 +675,16 @@ MonoBehaviour:
   - {fileID: 1381650626313151717}
   damageSound: {fileID: 2369832143275443349}
   deathSound: {fileID: 7950515990420361100}
-  groundDetectionRadius: 0.2
+  groundDetectionRadius: 0.45
   groundMask:
     serializedVersion: 2
     m_Bits: 64
-  maxFallToleration: 0.1
+  maxFallToleration: 0.13
   playerState: 0
   movementSettings:
     MaxSpeed: 0.25
-    ZeroToMaxSpeed: 0.12
-    MaxSpeedToZero: 0.1
+    ZeroToMaxSpeed: 0.09
+    MaxSpeedToZero: 0.07
   healthState:
     Health: 1000
     MaxHealth: 1000

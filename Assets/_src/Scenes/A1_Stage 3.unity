@@ -15723,6 +15723,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1391779881192704764, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: maxFallToleration
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779881192704764, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: groundDetectionRadius
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779881192704764, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: movementSettings.MaxSpeedToZero
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391779881192704764, guid: f0c475e613667774e99eb9be73e00038, type: 3}
+      propertyPath: movementSettings.ZeroToMaxSpeed
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: 1391779881192704766, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: mainCamera
       value: 

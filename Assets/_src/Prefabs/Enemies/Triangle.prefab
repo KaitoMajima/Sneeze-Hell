@@ -572,6 +572,7 @@ MonoBehaviour:
   healthState:
     Health: 700
     MaxHealth: 700
+  deathCutscene: {fileID: 0}
   movementState:
     Position: {x: 0, y: 0, z: 0}
     LocalScale: {x: 0, y: 0, z: 0}
@@ -930,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 7599899698207630665}
   enemyTransform: {fileID: 5884954637606817466}
+  pointInterval: 1
   movePoints:
   - {fileID: 6828202640331375192}
   - {fileID: 994629610}
