@@ -702,9 +702,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1980526055
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  m_Color: {r: 0.13542455, g: 0.40888488, b: 0.638, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 6887263236619635336}
-  color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  color: {r: 0.078431375, g: 0.36078432, b: 0.59607846, a: 1}
 --- !u!61 &6887263236619635339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -877,6 +877,7 @@ GameObject:
   - component: {fileID: 8884211596410818134}
   - component: {fileID: 8884211596410818135}
   - component: {fileID: 8884211596410818132}
+  - component: {fileID: 7038520536338399995}
   m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
@@ -938,9 +939,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1980526055
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  m_Color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -989,6 +990,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 8884211596410818133}
+--- !u!114 &7038520536338399995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884211596410818138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0d0e9b17e2f243a615a4e26e5738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 8884211596410818134}
+  color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
 --- !u!1 &8884211596835962046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1016,7 @@ GameObject:
   - component: {fileID: 8884211596835962042}
   - component: {fileID: 8884211596835962043}
   - component: {fileID: 8884211596835962040}
+  - component: {fileID: 1054658573538610710}
   m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
@@ -1062,9 +1078,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1980526055
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  m_Color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1113,3 +1129,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 3727141543579084325}
+--- !u!114 &1054658573538610710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8884211596835962046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0d0e9b17e2f243a615a4e26e5738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 8884211596835962042}
+  color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}

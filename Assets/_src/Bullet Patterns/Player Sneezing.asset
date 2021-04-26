@@ -15,14 +15,14 @@ MonoBehaviour:
   patterns:
   - bulletPrefab: {fileID: 8149134337374371219, guid: c0bd8c81a3f87f54a82e861f90aa8d3e, type: 3}
     useLockOn: 0
-    fireRate: 0.02
+    fireRate: 0.014
     spinRate: 1000
     initialRotation: 0
-    accuracy: 0.7
-    accuracyAngleRange: {x: -20, y: 20}
+    accuracy: 0.6
+    accuracyAngleRange: {x: -25, y: 25}
     bulletsPerShot: 3
     maxArrayAngleRange: 360
     isBurst: 0
     burstDuration: 0.3
     BurstShotCount: 4
-    maxBulletsPooled: 150
+    maxBulletsPooled: 200

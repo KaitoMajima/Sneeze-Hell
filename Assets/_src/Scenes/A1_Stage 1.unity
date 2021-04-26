@@ -4315,11 +4315,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 36043058484632853, guid: 2124514158907f546bc0197f2303df57, type: 3}
   m_PrefabInstance: {fileID: 1156280391}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &946614414 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 3238410399771825156, guid: 37085f60437cc2c48b09d248765de45e, type: 3}
-  m_PrefabInstance: {fileID: 3238410400441083018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &949233208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 36043058484632853, guid: 2124514158907f546bc0197f2303df57, type: 3}
@@ -14319,46 +14314,6 @@ PrefabInstance:
       propertyPath: targetTransform
       value: 
       objectReference: {fileID: 2115438394}
-    - target: {fileID: 1391779882317993988, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_LocalAABB.m_Center.x
-      value: -0.03010106
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391779882317993988, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.65850705
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_LocalAABB.m_Center.x
-      value: -0.03010106
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391779882670367115, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.65850705
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_LocalAABB.m_Center.x
-      value: -0.03010106
-      objectReference: {fileID: 0}
-    - target: {fileID: 1391779882791194420, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_LocalAABB.m_Extent.y
-      value: 0.65850705
-      objectReference: {fileID: 0}
-    - target: {fileID: 1710958451254689184, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: canvasGroup
-      value: 
-      objectReference: {fileID: 946614414}
-    - target: {fileID: 5033767699914154423, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_SceneBindings.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033767699914154423, guid: f0c475e613667774e99eb9be73e00038, type: 3}
-      propertyPath: m_SceneBindings.Array.data[8].key
-      value: 
-      objectReference: {fileID: -2122510836980700182, guid: 5c19076965d9c104eac05c91c6900dd6, type: 2}
     - target: {fileID: 5033767699914154423, guid: f0c475e613667774e99eb9be73e00038, type: 3}
       propertyPath: m_SceneBindings.Array.data[5].value
       value: 

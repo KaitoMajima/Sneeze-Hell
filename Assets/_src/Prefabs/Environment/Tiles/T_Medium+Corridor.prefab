@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 5216311914550446194}
   - component: {fileID: 5885792866343191104}
   - component: {fileID: 1397973242379627015}
+  - component: {fileID: 725408068648926387}
   m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
@@ -299,9 +300,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1980526055
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  m_Color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -350,6 +351,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 2072982102385268902}
+--- !u!114 &725408068648926387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3625211743882293109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0d0e9b17e2f243a615a4e26e5738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 5216311914550446194}
+  color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
 --- !u!1 &4754044341971946521
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +377,7 @@ GameObject:
   - component: {fileID: 4754044341971946501}
   - component: {fileID: 4754044341971946502}
   - component: {fileID: 4754044341971946503}
+  - component: {fileID: 7124419271515813864}
   m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
@@ -423,9 +439,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1980526055
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  m_Color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -474,6 +490,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpoint: {fileID: 2072982102385268902}
+--- !u!114 &7124419271515813864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4754044341971946521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be0d0e9b17e2f243a615a4e26e5738c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 4754044341971946501}
+  color: {r: 0.13725491, g: 0.40784314, b: 0.6392157, a: 1}
 --- !u!1 &4758432190547729221
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,9 +984,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1980526055
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  m_Color: {r: 0.13542455, g: 0.40888488, b: 0.638, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -979,7 +1009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rend: {fileID: 8136236708985926667}
-  color: {r: 0.02745098, g: 0.3137255, b: 0.54901963, a: 1}
+  color: {r: 0.078431375, g: 0.36078432, b: 0.59607846, a: 1}
 --- !u!61 &8136236708985926664
 BoxCollider2D:
   m_ObjectHideFlags: 0

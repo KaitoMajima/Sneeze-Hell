@@ -49,6 +49,7 @@ namespace KaitoCo
         [Title("Settings")]
 
         [SerializeField] private bool usePooling;
+        [SerializeField] private bool destroysOtherBullets;
         public BulletData bulletData;
         private Transform bulletOwner;
         public Transform BulletOwner { get => bulletOwner; set => bulletOwner = value;}
@@ -110,10 +111,25 @@ namespace KaitoCo
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
+            if(collider.TryGetComponent(out Bullet bullet))
+            {
+                
+                if(!destroysOtherBullets)
+                    return;
+                
+                if(bullet.bulletOwner == bulletOwner)
+                    return;
+                
+                bullet.Explode();
+
+                if(bulletLifetimeCoroutine != null)
+                    StopCoroutine(bulletLifetimeCoroutine);
+                Explode();
+                return;
+            }
             if(collider.isTrigger)
                 return;
-            if(collider.TryGetComponent(out Bullet bullet))
-                return;
+                
             if(collider.transform == bulletOwner)
                 return;
 

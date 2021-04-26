@@ -787,9 +787,9 @@ MonoBehaviour:
   sneezingCooldown: 1.1
   sneezeDashSettings:
     movementSettings:
-      MaxSpeed: 1
+      MaxSpeed: 0.8
       ZeroToMaxSpeed: 0
-      MaxSpeedToZero: 1
+      MaxSpeedToZero: 0.8
     duration: 1
     dampTime: 0
     cooldownTime: 0
@@ -1316,7 +1316,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playOnStartTween: 0
   tweenSettings:
-    duration: 0.6
+    duration: 2
     easeType: 18
     useLoops: 0
     loopType: 0
@@ -1856,7 +1856,7 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   playOnStartTween: 0
   tweenSettings:
-    duration: 0.6
+    duration: 2
     easeType: 18
     useLoops: 0
     loopType: 0
@@ -2080,14 +2080,14 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.812
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.23
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: f3d78c77e76d0c76
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
-  m_OverlapOperation: 0
+  m_OverlapOperation: 1
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
